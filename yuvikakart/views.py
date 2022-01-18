@@ -4,8 +4,6 @@ from store.models import Product
 def home(request):
     products = Product.objects.all().filter(is_available=True)
 
-    # Get the reviews
-
     context = {
         'products': products,
 
